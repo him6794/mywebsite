@@ -1,0 +1,13 @@
+.env
+*.db
+*.db-journal
+*.db-shm
+*.db-wal
+contacts.txt
+
+web/node_modules/
+web/dist/
+scratch/node_modules/
+scratch/*.png
+__pycache__/
+*.pyc

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="description" content="Justin is a software engineer building thoughtful experiences across distributed systems, AI deployment, and the web." />
+    <title>Justin — Software engineer</title>
+    <script>
+      try {
+        const language = localStorage.getItem('site-language')
+        const theme = localStorage.getItem('site-theme')
+        if (language === 'en' || language === 'zh-TW') document.documentElement.lang = language
+        if (language === 'zh-TW') {
+          document.querySelector('meta[name="description"]')?.setAttribute(
+            'content',
+            'Justin 是一位軟體工程師，專注打造分散式系統、AI 部署與網頁體驗。',
+          )
+          document.title = 'Justin — 軟體工程師'
+        }
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark')
+          document.querySelector('meta[name="theme-color"]')?.setAttribute('content', '#171717')
+        }
+      } catch {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
